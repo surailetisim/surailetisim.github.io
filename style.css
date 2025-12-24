@@ -1,40 +1,3 @@
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f7f7f7;
-    color: #333;
-}
-
-header {
-    background: #ffffff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 15px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #000;
-    font-weight: 600;
-    padding: 8px 14px;
-    border-radius: 6px;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    background-color: #ffcb05; /* TURKCELL sarısı */
-    color: #000;
-}
-
-
 * {
     margin: 0;
     padding: 0;
@@ -56,49 +19,41 @@ header {
     justify-content: space-between;
 }
 
-header h1 {
-    font-size: 22px;
-}
+header h1 { font-size: 22px; }
+header span { font-size: 13px; }
 
-header span {
-    font-size: 13px;
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
 }
 
 nav a {
     color: white;
-    margin: 0 12px;
     text-decoration: none;
     font-weight: bold;
-    padding: 8px 12px;
+    padding: 8px 14px;
     border-radius: 6px;
-    transition: background 0.3s;
+    transition: 0.3s;
 }
 
-nav a:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
+nav a:hover { background: rgba(255,255,255,0.2); }
 
 .hero {
+    background: linear-gradient(135deg, #003a8f, #0056b3);
+    color: white;
     text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(to bottom, #ffffff, #f2f9fc);
+    padding: 70px 20px;
 }
 
-
-.hero h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
+.hero h2 { font-size: 40px; margin-bottom: 15px; }
+.hero p { font-size: 18px; max-width: 700px; margin: auto; }
 
 .btn {
     display: inline-block;
-    background: #00a3e0;
-    color: white;
+    background: #ffcb05;
+    color: #000;
     padding: 14px 32px;
     text-decoration: none;
     margin: 8px;
@@ -107,17 +62,7 @@ nav a:hover {
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-}
-
-
-.btn.outline {
-    background: transparent;
-    color: #00a3e0;
-    border: 2px solid #00a3e0;
-}
+.btn:hover { transform: translateY(-2px); box-shadow:0 6px 15px rgba(0,0,0,0.15); }
 
 footer {
     text-align: center;
@@ -128,61 +73,9 @@ footer {
 
 /* MOBİL UYUM */
 @media (max-width: 768px) {
-
-    header {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-    }
-
-    nav {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin-top: 15px;
-    }
-
-    nav a {
-        width: 100%;
-        text-align: center;
-        margin: 5px 0;
-        padding: 12px;
-    }
-
-    .hero h2 {
-        font-size: 26px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-}
-
-.hero {
-    background: linear-gradient(135deg, #003a8f, #0056b3);
-    color: white;
-    text-align: center;
-    padding: 70px 20px;
-}
-
-.hero h2 {
-    font-size: 40px;
-    margin-bottom: 15px;
-}
-
-.hero p {
-    font-size: 18px;
-    max-width: 700px;
-    margin: auto;
-}
-
-.hero .buttons a {
-    display: inline-block;
-    margin: 15px;
-    padding: 14px 28px;
-    background: #ffcb05;
-    color: #000;
-    font-weight: bold;
-    border-radius: 8px;
-    text-decoration: none;
+    header { flex-direction: column; align-items: center; padding: 20px; }
+    nav { flex-direction: column; width: 100%; margin-top: 15px; }
+    nav a { width: 100%; text-align: center; margin: 5px 0; padding: 12px; }
+    .hero h2 { font-size: 26px; }
+    .hero p { font-size: 16px; }
 }
