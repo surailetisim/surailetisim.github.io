@@ -13,16 +13,14 @@ body {
 
 /* HEADER */
 header {
-    background: #003a8f; /* Yeni koyu mavi renk */
-    color: white;
+    background: #ffcb05; /* TURKCELL sarısı */
+    color: #000; /* Siyah yazı ile kontrast */
     padding: 15px 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
+
 
 header h1 { font-size: 22px; }
 header span { font-size: 13px; }
