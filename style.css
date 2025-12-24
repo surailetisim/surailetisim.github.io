@@ -1,3 +1,4 @@
+/* GENEL STİLLER */
 * {
     margin: 0;
     padding: 0;
@@ -10,13 +11,17 @@ body {
     color: #222;
 }
 
+/* HEADER */
 header {
-    background: #00a3e0;
+    background: #003a8f; /* Yeni koyu mavi renk */
     color: white;
     padding: 15px 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header h1 { font-size: 22px; }
@@ -38,20 +43,23 @@ nav a {
     transition: 0.3s;
 }
 
-nav a:hover { background: rgba(255,255,255,0.2); }
+nav a:hover {
+    background: #ffcb05; /* Turuncu / sarı hover */
+    color: #000;
+}
 
+/* HERO BÖLÜMÜ */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../hero-bg.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('hero-bg.jpg') no-repeat center center/cover;
     color: white;
     text-align: center;
     padding: 70px 20px;
 }
 
-
-
 .hero h2 { font-size: 40px; margin-bottom: 15px; }
 .hero p { font-size: 18px; max-width: 700px; margin: auto; }
 
+/* BUTONLAR */
 .btn {
     display: inline-block;
     background: #ffcb05;
@@ -66,6 +74,7 @@ nav a:hover { background: rgba(255,255,255,0.2); }
 
 .btn:hover { transform: translateY(-2px); box-shadow:0 6px 15px rgba(0,0,0,0.15); }
 
+/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
