@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Hat Başvurusu | Sura İletişim Dalaman</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <h1>Sura İletişim Dalaman</h1>
+        <span>Yetkili TURKCELL Mağazası</span>
+    </div>
+
+    <nav>
+        <a href="index.html">Ana Sayfa</a>
+        <a href="products.html">Ürünler</a>
+        <a href="apply.html">Hat Başvurusu</a>
+        <a href="contact.html">İletişim</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Turkcell Hat Başvuru Formu</h2>
+    <p>Formu doldurun, başvurunuzu WhatsApp üzerinden birlikte tamamlayalım.</p>
+
+    <form id="applyForm">
+        <input type="text" id="name" placeholder="Ad Soyad" required><br><br>
+
+        <input type="tel" id="phone" placeholder="Telefon Numaranız" required><br><br>
+
+        <select id="type" required>
+            <option value="">Hat Türü Seçiniz</option>
+            <option>Yeni Hat</option>
+            <option>Numara Taşıma</option>
+        </select><br><br>
+
+        <textarea id="note" placeholder="Varsa notunuz"></textarea><br><br>
+
+        <button type="submit" class="btn">WhatsApp’tan Başvur</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2025 Sura İletişim Dalaman | TURKCELL</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
