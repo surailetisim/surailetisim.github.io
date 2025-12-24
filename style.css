@@ -51,11 +51,14 @@ nav a:hover {
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('hero-bg.jpg') no-repeat center center/cover;
     color: white;
     text-align: center;
-    padding: 70px 20px;
+    padding: 10vh 2vw; /* Ekran boyutuna göre değişen padding */
 }
+
 
 .hero h2 { font-size: 40px; margin-bottom: 15px; }
 .hero p { font-size: 18px; max-width: 700px; margin: auto; }
+
+
 
 /* BUTONLAR */
 .btn {
@@ -85,6 +88,9 @@ footer {
     header { flex-direction: column; align-items: center; padding: 20px; }
     nav { flex-direction: column; width: 100%; margin-top: 15px; }
     nav a { width: 100%; text-align: center; margin: 5px 0; padding: 12px; }
-    .hero h2 { font-size: 26px; }
-    .hero p { font-size: 16px; }
+
+    .hero h2 { font-size: 26px; } /* Mobilde daha küçük başlık */
+    .hero p { font-size: 16px; }  /* Mobilde daha küçük paragraf */
+    .hero { padding: 8vh 4vw; }   /* Mobilde padding azaltıldı */
 }
+
