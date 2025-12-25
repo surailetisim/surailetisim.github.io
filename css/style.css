@@ -1,3 +1,4 @@
+/* GENEL STİLLER */
 * {
     margin: 0;
     padding: 0;
@@ -10,14 +11,16 @@ body {
     color: #222;
 }
 
+/* HEADER */
 header {
-    background: #00a3e0;
-    color: white;
+    background: #ffcb05; /* TURKCELL sarısı */
+    color: #000; /* Siyah yazı ile kontrast */
     padding: 15px 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 
 header h1 { font-size: 22px; }
 header span { font-size: 13px; }
@@ -38,21 +41,32 @@ nav a {
     transition: 0.3s;
 }
 
-nav a:hover { background: rgba(255,255,255,0.2); }
-
-.hero {
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('hero-bg.jpg') no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    padding: 70px 20px;
+nav a:hover {
+    background: #ffcb05; /* Turuncu / sarı hover */
+    color: #000;
 }
 
+/* HERO BÖLÜMÜ */
+.hero {
+    background:
+        linear-gradient(
+            rgba(0, 60, 136, 0.78),
+            rgba(0, 60, 136, 0.78)
+        ),
+        url("images/hero-bg.jpg") no-repeat center center / cover;
+    color: white;
+    text-align: center;
+    padding: 10vh 2vw;
+}
 
 
 
 .hero h2 { font-size: 40px; margin-bottom: 15px; }
 .hero p { font-size: 18px; max-width: 700px; margin: auto; }
 
+
+
+/* BUTONLAR */
 .btn {
     display: inline-block;
     background: #ffcb05;
@@ -67,6 +81,7 @@ nav a:hover { background: rgba(255,255,255,0.2); }
 
 .btn:hover { transform: translateY(-2px); box-shadow:0 6px 15px rgba(0,0,0,0.15); }
 
+/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
@@ -74,11 +89,24 @@ footer {
     color: white;
 }
 
+.hero h2 {
+    text-shadow: 0 3px 10px rgba(0,0,0,0.35);
+}
+
+.hero p {
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+
+
 /* MOBİL UYUM */
 @media (max-width: 768px) {
     header { flex-direction: column; align-items: center; padding: 20px; }
     nav { flex-direction: column; width: 100%; margin-top: 15px; }
     nav a { width: 100%; text-align: center; margin: 5px 0; padding: 12px; }
-    .hero h2 { font-size: 26px; }
-    .hero p { font-size: 16px; }
+
+    .hero h2 { font-size: 26px; } /* Mobilde daha küçük başlık */
+    .hero p { font-size: 16px; }  /* Mobilde daha küçük paragraf */
+    .hero { padding: 9vh 4vw; }   /* Mobilde padding azaltıldı */
 }
+

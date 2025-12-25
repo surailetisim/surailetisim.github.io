@@ -1,20 +1,21 @@
 document.getElementById("applyForm").addEventListener("submit", function(e) {
-    e.preventDefault();
+    e.preventDefault(); // Formun sayfayı yenilemesini engeller
 
+    // Form verilerini al
     const name = document.getElementById("name").value;
     const phone = document.getElementById("phone").value;
     const type = document.getElementById("type").value;
     const note = document.getElementById("note").value;
 
-    const whatsappNumber = "905451349642"; // BURAYA KENDİ NUMARANI YAZ
+    // WhatsApp numarası
+    const whatsappNumber = "905451349642"; 
 
-    const message =
-        "Merhaba, Turkcell hat başvurusu yapmak istiyorum.%0A%0A" +
-        "Ad Soyad: " + name + "%0A" +
-        "Telefon: " + phone + "%0A" +
-        "Hat Türü: " + type + "%0A" +
-        "Not: " + note;
+    // Mesaj oluştur
+    const message = `Merhaba, Turkcell hat başvurusu yapmak istiyorum.%0AAd Soyad: ${name}%0ATelefon: ${phone}%0AHat Türü: ${type}%0ANot: ${note}`;
 
-    const url = "https://wa.me/" + whatsappNumber + "?text=" + message;
-    window.open(url, "_blank");
+    // WhatsApp linkini oluştur
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
+
+    // Yeni sekmede aç
+    window.open(whatsappURL, "_blank");
 });
