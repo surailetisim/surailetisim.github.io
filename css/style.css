@@ -13,13 +13,12 @@ body {
 
 /* HEADER */
 header {
-    background: #ffcb05; /* TURKCELL sarısı */
-    color: #000; 
+    background: #ffcb05; /* Turkcell sarısı */
+    color: #000;
     padding: 15px 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 header h1 { font-size: 22px; }
@@ -30,7 +29,6 @@ nav {
     justify-content: center;
     gap: 20px;
     padding: 15px;
-    flex-wrap: wrap;
 }
 
 nav a {
@@ -43,35 +41,37 @@ nav a {
 }
 
 nav a:hover {
-    background: #ffcb05; 
+    background: #ffcb05;
     color: #000;
 }
 
 /* HERO BÖLÜMÜ */
 .hero {
     background:
-        linear-gradient(
-            rgba(0, 60, 136, 0.6),
-            rgba(0, 60, 136, 0.6)
-        ),
-        url("../images/hero-bg.jpg") no-repeat center top;
+        linear-gradient(rgba(0, 60, 136, 0.6), rgba(0, 60, 136, 0.6)),
+        url("images/hero-bg.jpg") no-repeat;
+    background-position: top left;
     background-size: cover;
     color: white;
-    text-align: center;
-    padding: 15vh 2vw;
+    text-align: left; /* Sol hizalı */
+    padding: 15vh 5vw; /* Üstten ve yandan boşluk */
+}
+
+.hero .container {
+    max-width: 800px;
 }
 
 .hero h2 {
-    font-size: 40px;
+    font-size: 42px;
     margin-bottom: 15px;
     text-shadow: 0 3px 10px rgba(0,0,0,0.35);
 }
 
 .hero p {
     font-size: 18px;
-    max-width: 700px;
-    margin: 20px auto;
+    margin-bottom: 20px;
     text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    line-height: 1.6;
 }
 
 /* BUTONLAR */
@@ -81,5 +81,56 @@ nav a:hover {
     color: #000;
     padding: 14px 32px;
     text-decoration: none;
-    margin: 8px;
-    bor
+    margin: 8px 0;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+}
+
+footer a {
+    color: #ffcb05;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* MOBİL UYUM */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    nav {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+    }
+    nav a {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+        padding: 12px;
+    }
+    .hero {
+        text-align: center; /* Mobilde ortala */
+        padding: 12vh 4vw;
+    }
+    .hero h2 { font-size: 28px; }
+    .hero p { font-size: 16px; }
+}
