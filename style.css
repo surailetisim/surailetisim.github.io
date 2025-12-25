@@ -13,7 +13,7 @@ body {
 
 /* HEADER */
 header {
-    background: #ffcb05; /* TURKCELL sarısı */
+    background: #ffcb05; /* Turkcell sarısı */
     color: #000;
     padding: 15px 40px;
     display: flex;
@@ -48,33 +48,30 @@ nav a:hover {
 /* HERO BÖLÜMÜ */
 .hero {
     background:
-        linear-gradient(
-            rgba(0, 60, 136, 0.6),
-            rgba(0, 60, 136, 0.6)
-        ),
+        linear-gradient(rgba(0, 60, 136, 0.6), rgba(0, 60, 136, 0.6)),
         url("images/hero-bg.jpg") no-repeat;
     background-position: top left;
     background-size: cover;
     color: white;
-    text-align: center;
-    padding: 12vh 2vw;
+    text-align: left; /* Sol hizalı */
+    padding: 15vh 5vw; /* Üstten ve yandan boşluk */
 }
 
 .hero .container {
-    padding-top: 5vh; /* Başlığı görselin üst kısmına çekmek için */
+    max-width: 800px;
 }
 
 .hero h2 {
-    font-size: 40px;
+    font-size: 42px;
     margin-bottom: 15px;
     text-shadow: 0 3px 10px rgba(0,0,0,0.35);
 }
 
 .hero p {
     font-size: 18px;
-    max-width: 700px;
-    margin: 20px auto;
+    margin-bottom: 20px;
     text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    line-height: 1.6;
 }
 
 /* BUTONLAR */
@@ -84,7 +81,7 @@ nav a:hover {
     color: #000;
     padding: 14px 32px;
     text-decoration: none;
-    margin: 8px;
+    margin: 8px 0;
     border-radius: 30px;
     font-weight: bold;
     transition: transform 0.2s, box-shadow 0.2s;
@@ -131,8 +128,9 @@ footer a:hover {
         padding: 12px;
     }
     .hero {
+        text-align: center; /* Mobilde ortala */
         padding: 12vh 4vw;
     }
-    .hero h2 { font-size: 26px; }
+    .hero h2 { font-size: 28px; }
     .hero p { font-size: 16px; }
 }
