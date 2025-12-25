@@ -26,17 +26,22 @@ header {
     padding: 15px 20px;
 }
 
+.logo {
+    display: flex;
+    align-items: center; /* Logo ve yazıyı dikey ortalar */
+    gap: 10px;           /* Logo ile yazı arası boşluk */
+}
+
 .logo img {
-    height: 250px;
-    vertical-align: middle;
+    height: 150px;        /* Logo boyutu düzeltildi */
 }
 
 .logo span {
     font-weight: bold;
     font-size: 18px;
-    margin-left: 10px;
-    vertical-align: middle;
+    white-space: nowrap;  /* Satır kaymasını engeller */
 }
+
 
 nav a {
     text-decoration: none;
