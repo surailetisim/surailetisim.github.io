@@ -48,17 +48,30 @@ nav a:hover {
 
 /* HERO BÖLÜMÜ */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('hero-bg.jpg') no-repeat center center/cover;
+    background:
+        linear-gradient(
+            rgba(0, 60, 136, 0.6),
+            rgba(0, 60, 136, 0.6)
+        ),
+        url("images/hero-bg.jpg") no-repeat center top;
+    background-size: cover;
     color: white;
     text-align: center;
-    padding: 10vh 2vw; /* Ekran boyutuna göre değişen padding */
+    padding: 15vh 2vw; /* Hero yüksekliği artırıldı */
 }
 
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.35);
+}
 
-.hero h2 { font-size: 40px; margin-bottom: 15px; }
-.hero p { font-size: 18px; max-width: 700px; margin: auto; }
-
-
+.hero p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 20px auto;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
 
 /* BUTONLAR */
 .btn {
@@ -73,14 +86,9 @@ nav a:hover {
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.btn:hover { transform: translateY(-2px); box-shadow:0 6px 15px rgba(0,0,0,0.15); }
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #222;
-    color: white;
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
 /* MOBİL UYUM */
@@ -89,8 +97,11 @@ footer {
     nav { flex-direction: column; width: 100%; margin-top: 15px; }
     nav a { width: 100%; text-align: center; margin: 5px 0; padding: 12px; }
 
-    .hero h2 { font-size: 26px; } /* Mobilde daha küçük başlık */
-    .hero p { font-size: 16px; }  /* Mobilde daha küçük paragraf */
-    .hero { padding: 8vh 4vw; }   /* Mobilde padding azaltıldı */
+    .hero {
+        padding: 12vh 4vw; /* Mobilde padding optimize edildi */
+    }
+    .hero h2 { font-size: 26px; }
+    .hero p { font-size: 16px; }
 }
+
 
