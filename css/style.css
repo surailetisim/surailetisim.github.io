@@ -25,7 +25,9 @@ body {
 
 /* HEADER */
 .header {
-  background: #fff;
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff;
   border-bottom: 1px solid #eee;
 }
 
@@ -38,13 +40,34 @@ body {
 
 .logo {
   height: 45px;
+  margin-right: auto;
 }
 
 .nav a {
-  margin-left: 20px;
+  margin-left: 30px; /* %50 artırılmış boşluk */
   text-decoration: none;
   color: var(--blue);
   font-weight: 600;
+}
+
+/* HEADER – teknoloji temalı arka plan */
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(0, 115, 230, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 80% 60%, rgba(255, 204, 0, 0.1) 0%, transparent 45%),
+    linear-gradient(135deg, rgba(0, 0, 0, 0.03) 25%, transparent 25%, transparent 50%, rgba(0,0,0,0.03) 50%, rgba(0,0,0,0.03) 75%, transparent 75%, transparent);
+  background-size: auto, auto, 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Header içeriğini öne al */
+.header > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* HERO */
@@ -129,52 +152,7 @@ body {
   opacity: 0.8;
 }
 
-/* MOBILE HEADER FIX */
-@media (max-width: 768px) {
-
-  .header-inner {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .nav {
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-  }
-
-  .nav a {
-    margin-left: 0;
-    font-size: 0.95rem;
-  }
-
-}
-
-/* DESKTOP HEADER FINAL ALIGNMENT */
-@media (min-width: 1024px) {
-
-  .header-inner {
-    justify-content: space-between;
-  }
-
-  .logo {
-    margin-right: auto;
-  }
-
-  .nav {
-    display: flex;
-    align-items: center;
-  }
-
-  .nav a {
-    margin-left: 30px; /* önce 20px'ti → %50 artırıldı */
-  }
-
-}
-
 /* FOOTER CONTACT – hizalama ve görsel hiyerarşi */
-
 .footer h3 {
   margin-bottom: 12px;
   font-size: 1.05rem;
@@ -206,30 +184,34 @@ body {
   margin-bottom: 0;
 }
 
-/* HEADER – teknoloji temalı arka plan */
+/* MOBILE HEADER FIX */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
 
-header {
-  position: relative;
-  background-color: #ffffff;
-  overflow: hidden;
+  .nav {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .nav a {
+    margin-left: 0;
+    font-size: 0.95rem;
+  }
 }
 
-/* Teknoloji kaplama */
-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    radial-gradient(circle at 20% 30%, rgba(0, 115, 230, 0.08) 0%, transparent 40%),
-    radial-gradient(circle at 80% 60%, rgba(255, 204, 0, 0.08) 0%, transparent 45%),
-    linear-gradient(135deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.02) 50%, rgba(0, 0, 0, 0.02) 75%, transparent 75%, transparent);
-  background-size: auto, auto, 40px 40px;
-  pointer-events: none;
-  z-index: 0;
-}
+/* DESKTOP HEADER FINAL ALIGNMENT */
+@media (min-width: 1024px) {
+  .header-inner {
+    justify-content: space-between;
+  }
 
-/* Header içeriğini öne al */
-header > * {
-  position: relative;
-  z-index: 1;
+  .nav {
+    display: flex;
+    align-items: center;
+  }
 }
