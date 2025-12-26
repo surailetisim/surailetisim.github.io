@@ -151,3 +151,24 @@ body {
 
 }
 
+/* DESKTOP HEADER FINAL ALIGNMENT */
+@media (min-width: 1024px) {
+
+  .header-inner {
+    justify-content: space-between;
+  }
+
+  .logo {
+    margin-right: auto;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav a {
+    margin-left: 30px; /* önce 20px'ti → %50 artırıldı */
+  }
+
+}
